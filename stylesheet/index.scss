@@ -125,25 +125,25 @@ a{
         .logo{
             width: 239px;
             height: 78px;
-            img{
+            >img{
                 width: 100%;
             }
         }
         .nav{
             height: 100%;
-            ul{
-                li{
+            >ul{
+                >li{
                     float:left;
                     width: 90px;
                     height: 78px;
                     line-height: 78px;
                     text-align: center;
                     font-size: 16px;
-                    a{
+                    >a{
                         color: #333333;
                         }
                     }
-                    .active{
+                    >.active{
                         color: red;
                     }
                     a:hover{
@@ -174,16 +174,32 @@ a{
             }
         }
 }
+// 下拉导航
+
+.sub-down{
+    transform: translateY(0px);
+}
+#tabs:hover{
+    transform: translateY(0px);
+    display: block;
+}
 #tabs{
+    transform: translateY(-229px);
+    display: none;
     // width: 100%;
+    // transform: translateY(-229px);
+    // display: none;
+    position: absolute;
+    z-index: 10;
+    // left: 0;
+    // top: 0;
     height: 229px;
     border-top: 1px solid #eeeeee;
     background: #ffffff;
     box-shadow: 0 2px 3px 0 #d5d5d5;
     
-    
-
     #com-width{
+        // position: absolute;
         height: 229px;
         position: relative;
         // @include space-block;
@@ -259,7 +275,7 @@ a{
             width: 700%;
             height: 100%;
             // position: relative;
-            li{
+            >li{
                 width:1920px;
                 height: 100%;
                 float: left;
@@ -268,6 +284,13 @@ a{
                 }
             }
         }
+        // #dots{
+        //     width: 500px;
+        //     height: 70px;
+        //     background: #333333;
+
+            
+        // }
         .main{
             background: rgba(0, 0, 0, 0.5);
             height: 500px;
@@ -305,6 +328,7 @@ a{
             }
         }
         .menu{
+            display: none;
             width: 480px;
             height: 500px;
             position: absolute;
@@ -314,9 +338,6 @@ a{
             box-sizing: border-box;
             padding: 26px;
             .submenu{
-                // vertical-align:middle;
-                // @include center-block;
-                // padding-bottom :30px;
                 box-sizing: border-box;
                 >a{
                     // width: 400px;

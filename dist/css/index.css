@@ -134,22 +134,22 @@ a {
   #nav .container .logo {
     width: 239px;
     height: 78px; }
-    #nav .container .logo img {
+    #nav .container .logo > img {
       width: 100%; }
   #nav .container .nav {
     height: 100%; }
-    #nav .container .nav ul li {
+    #nav .container .nav > ul > li {
       float: left;
       width: 90px;
       height: 78px;
       line-height: 78px;
       text-align: center;
       font-size: 16px; }
-      #nav .container .nav ul li a {
+      #nav .container .nav > ul > li > a {
         color: #333333; }
-    #nav .container .nav ul .active {
+    #nav .container .nav > ul > .active {
       color: red; }
-    #nav .container .nav ul a:hover {
+    #nav .container .nav > ul a:hover {
       color: red; }
 
 #nav .search {
@@ -170,7 +170,18 @@ a {
     color: #e3e3e3;
     cursor: pointer; }
 
+.sub-down {
+  transform: translateY(0px); }
+
+#tabs:hover {
+  transform: translateY(0px);
+  display: block; }
+
 #tabs {
+  transform: translateY(-229px);
+  display: none;
+  position: absolute;
+  z-index: 10;
   height: 229px;
   border-top: 1px solid #eeeeee;
   background: #ffffff;
@@ -236,11 +247,11 @@ a {
   #banner #bannerList {
     width: 700%;
     height: 100%; }
-    #banner #bannerList li {
+    #banner #bannerList > li {
       width: 1920px;
       height: 100%;
       float: left; }
-      #banner #bannerList li img {
+      #banner #bannerList > li img {
         width: 100%; }
   #banner .main {
     background: rgba(0, 0, 0, 0.5);
@@ -271,6 +282,7 @@ a {
       #banner .main .list div:hover {
         background: red; }
   #banner .menu {
+    display: none;
     width: 480px;
     height: 500px;
     position: absolute;
