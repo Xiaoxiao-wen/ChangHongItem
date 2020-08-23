@@ -18,4 +18,5 @@ require(["banner"],function(banner){
 })
 require(["topNav"],function(topNav){
     topNav.topDownload();
+    topNav.topNavTab();
 })
