@@ -19,7 +19,7 @@ font-size:16px;font-style:normal;
 html{
     margin: 0;
     padding: 0;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     // position: relative;
     // width: 100%;
     // height: 100%;
@@ -270,11 +270,11 @@ a{
 #banner{
     width: 1920px;
     height: 500px;
-    overflow: hidden;
+    // overflow-x: hidden;
     position: relative;
         #bannerList{
             width: 700%;
-            height: 100%;
+            // height: 100%;
             // position: relative;
             >li{
                 width:1920px;
@@ -290,95 +290,95 @@ a{
         //     height: 70px;
         //     background: #333333;
 
-            
-        // }
         .main{
             background: rgba(0, 0, 0, 0.5);
-            height: 500px;
+            // height: 500px;
+            min-height: 500px;
             width: 226px; 
             text-align: left;
             line-height: 60px;
             position: absolute;
             left: 339px;
             top: 0;
+            
             .list{
                 width: 100%;
                 height: 100%;
-                div{
+                // min-height: 500px;
+                .menu{
                     width: 100%;
-                    height: 60px;
-                    padding-left: 20px;
-                    box-sizing: border-box;
-                    a{
-                        color: #ffffff;
+                    height: 500px;
+                    overflow: hidden;
+                    // min-height: 500px;
+                    .submenu{
+                        // color: #ffffff;
                         font-size:16px;
-                        .iconfont{
-                            font-size: 26px;
-                            margin-right:15px;
+                        padding-left: 20px;
+                        box-sizing: border-box;
+                        >a{
+                            color: white;
+                            .iconfont{
+                                font-size: 26px;
+                                margin-right:15px;
+                            }
+                        }
+                        .children{
+                            width: 480px;
+                            min-height: 500px;
+                            position: absolute;
+                            left: 226px;
+                            top: 0;
+                            background: white;
+                            box-sizing: border-box;
+                            padding: 26px;
+                            display: none;
+                            word-wrap:break-word;
+                            z-index: 10;
+                           .children-list{
+                               >li{
+                                   >.top{
+                                    color: #333333;
+                                    font-size:16px ;
+                                    line-height: 60px;
+                                    height: 70px;
+                                    display: block;
+                                    border-bottom: 1px solid #eeeeee;
+                                        >img{
+                                            width: 60px;
+                                            height: 60px;
+                                            margin-right: 10px;
+                                            vertical-align:middle;
+                                        }
+                                    
+                                    }
+                                    >.bottom{
+                                        margin-top: 8px;
+                                        font-size: 14px;
+                                        // display: block;
+                                        padding: 0 15px;
+                                        box-sizing: border-box;
+                                        border-left: 1px solid #e0e0e0;
+                                    }
+                                    
+                               }
+                           } 
+                        }
+                    }
+
+                    .enter{
+                        background: red;
+                        >.children{
+                            display: block;
                         }
                     }
                 }
-                .special{
-                    padding-left: 50px;
-                    box-sizing: border-box;
-                }
-                div:hover{
-                    background: red;
-                }
-                
-            }
-        }
-        .menu{
-            display: none;
-            width: 480px;
-            height: 500px;
-            position: absolute;
-            left:226px ;
-            top: 0;
-            background: white;
-            box-sizing: border-box;
-            padding: 26px;
-            .submenu{
-                box-sizing: border-box;
-                >a{
-                    // width: 400px;
-                    height: 70px;
-                    display: block;
-                    border-bottom: 1px solid #eeeeee;
-                    // display: inline-block;
-                    // text-align: center;
-                    color: #333333;
-                    font-size:16px ;
-                    line-height: 60px;
-                    
-                    img{
-                        width: 60px;
-                        height: 60px;
-                        margin-right: 10px;
-                        vertical-align:middle;
-                    }
-                }
-            }
-            .inner-pro-content{
-                line-height: 30px;
-                >a{
-                    float: left;
-                    margin-top: 8px;
-                    font-size: 14px;
-                    color: #333333;
-                    display: block;
-                    padding: 0 15px;
-                    box-sizing: border-box;
-                    border-left: 1px solid #e0e0e0;
-                
             }
         }
     }
-}
+// }
 #notice{
     @include center-block;
-    // width: 1241px;
-    // width: 1226px;
+    background: #f9f9f9;
     .notice{
         width: 100%;
         height: 40px;
@@ -389,6 +389,7 @@ a{
     }
 }
 #guide-news{
+    background: #f9f9f9;
     @include center-block;
     #guide-pic{
         @include center-block;

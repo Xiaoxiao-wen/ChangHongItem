@@ -63,7 +63,8 @@ table {
 
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
 
 body {
   position: relative; }
@@ -241,11 +242,9 @@ a {
 #banner {
   width: 1920px;
   height: 500px;
-  overflow: hidden;
   position: relative; }
   #banner #bannerList {
-    width: 700%;
-    height: 100%; }
+    width: 700%; }
     #banner #bannerList > li {
       width: 1920px;
       height: 100%;
@@ -254,7 +253,7 @@ a {
         width: 100%; }
   #banner .main {
     background: rgba(0, 0, 0, 0.5);
-    height: 500px;
+    min-height: 500px;
     width: 226px;
     text-align: left;
     line-height: 60px;
@@ -264,62 +263,59 @@ a {
     #banner .main .list {
       width: 100%;
       height: 100%; }
-      #banner .main .list div {
+      #banner .main .list .menu {
         width: 100%;
-        height: 60px;
-        padding-left: 20px;
-        box-sizing: border-box; }
-        #banner .main .list div a {
-          color: #ffffff;
-          font-size: 16px; }
-          #banner .main .list div a .iconfont {
-            font-size: 26px;
-            margin-right: 15px; }
-      #banner .main .list .special {
-        padding-left: 50px;
-        box-sizing: border-box; }
-      #banner .main .list div:hover {
-        background: red; }
-  #banner .menu {
-    display: none;
-    width: 480px;
-    height: 500px;
-    position: absolute;
-    left: 226px;
-    top: 0;
-    background: white;
-    box-sizing: border-box;
-    padding: 26px; }
-    #banner .menu .submenu {
-      box-sizing: border-box; }
-      #banner .menu .submenu > a {
-        height: 70px;
-        display: block;
-        border-bottom: 1px solid #eeeeee;
-        color: #333333;
-        font-size: 16px;
-        line-height: 60px; }
-        #banner .menu .submenu > a img {
-          width: 60px;
-          height: 60px;
-          margin-right: 10px;
-          vertical-align: middle; }
-    #banner .menu .inner-pro-content {
-      line-height: 30px; }
-      #banner .menu .inner-pro-content > a {
-        float: left;
-        margin-top: 8px;
-        font-size: 14px;
-        color: #333333;
-        display: block;
-        padding: 0 15px;
-        box-sizing: border-box;
-        border-left: 1px solid #e0e0e0; }
+        height: 500px;
+        overflow: hidden; }
+        #banner .main .list .menu .submenu {
+          font-size: 16px;
+          padding-left: 20px;
+          box-sizing: border-box; }
+          #banner .main .list .menu .submenu > a {
+            color: white; }
+            #banner .main .list .menu .submenu > a .iconfont {
+              font-size: 26px;
+              margin-right: 15px; }
+          #banner .main .list .menu .submenu .children {
+            width: 480px;
+            min-height: 500px;
+            position: absolute;
+            left: 226px;
+            top: 0;
+            background: white;
+            box-sizing: border-box;
+            padding: 26px;
+            display: none;
+            word-wrap: break-word;
+            z-index: 10; }
+            #banner .main .list .menu .submenu .children .children-list > li > .top {
+              color: #333333;
+              font-size: 16px;
+              line-height: 60px;
+              height: 70px;
+              display: block;
+              border-bottom: 1px solid #eeeeee; }
+              #banner .main .list .menu .submenu .children .children-list > li > .top > img {
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+                vertical-align: middle; }
+            #banner .main .list .menu .submenu .children .children-list > li > .bottom {
+              margin-top: 8px;
+              font-size: 14px;
+              padding: 0 15px;
+              box-sizing: border-box;
+              border-left: 1px solid #e0e0e0; }
+        #banner .main .list .menu .enter {
+          background: red; }
+          #banner .main .list .menu .enter > .children {
+            display: block; }
 
 #notice {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background: #f9f9f9; }
   #notice .notice {
     width: 100%;
     height: 40px;
@@ -328,6 +324,7 @@ a {
       font-size: 20px; }
 
 #guide-news {
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center; }
